@@ -1,0 +1,46 @@
+# Exported from Render on 2024-06-04T16:04:40Z
+services:
+- type: web
+  name: LLM-Y
+  runtime: docker
+  repo: https://github.com/rubyvrooom/Flowise
+  plan: starter
+  envVars:
+  - key: BLOB_STORAGE_PATH
+    sync: false
+  - key: SECRETKEY_PATH
+    sync: false
+  - key: LOG_PATH
+    sync: false
+  - key: APIKEY_PATH
+    sync: false
+  - key: LANGCHAIN_API_KEY
+    sync: false
+  - key: LANGCHAIN_TRACING_V2
+    sync: false
+  - key: LANGCHAIN_PROJECT
+    sync: false
+  - key: LANGCHAIN_ENDPOINT
+    sync: false
+  - key: LANGCHAIN_CALLBACKS_BACKGROUND
+    sync: false
+  - key: FLOWISE_SECRETKEY_OVERWRITE
+    sync: false
+  - key: DATABASE_PATH
+    sync: false
+  - key: CORS_ORIGINS
+    sync: false
+  - key: NODE_VERSION
+    sync: false
+  - key: FLOWISE_PASSWORD
+    sync: false
+  - key: FLOWISE_USERNAME
+    sync: false
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  disk:
+    name: Lmmy_chat
+    mountPath: /opt/render/.flowise
+    sizeGB: 1
+version: "1"
